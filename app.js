@@ -1,6 +1,8 @@
 var buttonCifrar = document.querySelector('.buttonCifrar');
 var consola = document.querySelector('.consolaTextarea');
 var contenedorMensajes = document.querySelector('.mensajes');
+var menu = document.querySelector('.icon-menu');
+var burgerMenu = document.querySelector('.burgerMenu');
 var arreglo = [];
 var arregloPrueba = [];
 
@@ -41,4 +43,11 @@ function borrarElemento(id) {
     if (contenedor) {
         contenedor.parentNode.removeChild(contenedor);
     }
+};
+
+
+menu.addEventListener('click', buMenu);
+
+function buMenu(){
+    console.log(burgerMenu.classList.toggle('display'));
 }
