@@ -12,7 +12,9 @@ h2,
 a {
     font-family: 'Roboto', sans-serif;
 }
-
+.display {
+    display: none;
+}
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
@@ -80,14 +82,33 @@ body {
             text-decoration: none;
         }
     }
-
-    .icon-menu img {
-        width: 40px;
-
-        img:hover {
-            cursor: pointer;
-        }
-    }
+}
+.icon-menu {
+    position: relative;
+}
+.burgerMenu {
+    position: absolute;
+    right: 30px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+.burgerMenu a {
+    text-decoration: none;
+    padding: 10px;
+}
+.burgerMenu a:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.icon-menu img {
+    width: 40px;
+}
+.icon-menu:hover {
+    cursor: pointer;
 }
 
 // Main
@@ -128,6 +149,11 @@ main {
     }
     border: none;
 }
+.contenedorButtons {
+    @include flex-center();
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
 .button {
     color: black;
     font-family: 'Roboto', sans-serif;
@@ -165,5 +191,28 @@ main {
         margin-bottom: 5px;
         color: black;
         text-transform: none;
+        font-weight: bold;
     }
+    span {
+        text-align: end;
+    }
+}
+.mensaje {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    .mensajeBorrar {
+        background-color: rgba(255, 255, 255, .5);
+        padding: 10px;
+        border-radius: 10px;
+        
+    }
+}
+.mensajeBorrar:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .9);
 }

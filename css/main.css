@@ -11,6 +11,10 @@ a {
   font-family: "Roboto", sans-serif;
 }
 
+.display {
+  display: none;
+}
+
 body {
   background-image: url(/assets/fondo.jpg);
   background-size: cover;
@@ -41,10 +45,37 @@ body {
 .contenedorNav .text-menu a {
   text-decoration: none;
 }
-.contenedorNav .icon-menu img {
+
+.icon-menu {
+  position: relative;
+}
+
+.burgerMenu {
+  position: absolute;
+  right: 30px;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.burgerMenu a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.burgerMenu a:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.icon-menu img {
   width: 40px;
 }
-.contenedorNav .icon-menu img img:hover {
+
+.icon-menu:hover {
   cursor: pointer;
 }
 
@@ -101,6 +132,15 @@ main {
   }
 }
 
+.contenedorButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+
 .button {
   color: black;
   font-family: "Roboto", sans-serif;
@@ -140,4 +180,28 @@ main {
   margin-bottom: 5px;
   color: black;
   text-transform: none;
+  font-weight: bold;
+}
+.mensajes span {
+  text-align: end;
+}
+
+.mensaje {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.mensaje .mensajeBorrar {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.mensajeBorrar:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
 }/*# sourceMappingURL=main.css.map */
