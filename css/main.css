@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url(/css/reset.css);
+* {
+  color: white;
+}
+
+p,
+h1,
+h2,
+a {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url(/assets/fondo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+}
+
+.contenedorNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid white;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.contenedorNav .text-menu {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.contenedorNav .text-menu a {
+  text-decoration: none;
+}
+.contenedorNav .icon-menu img {
+  width: 40px;
+}
+.contenedorNav .icon-menu img img:hover {
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.consolasEncriptador {
+  margin-top: 30px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.consola {
+  border: 1px solid white;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.consola textarea {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  height: auto;
+  border: none;
+}
+@media only screen and (max-width: 576px) {
+  .consola textarea {
+    font-size: 17px;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .consola textarea {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .consola textarea {
+    font-size: 25px;
+  }
+}
+
+.button {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.contenedorMensajes {
+  width: 90%;
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 10px;
+}
+.contenedorMensajes .title {
+  font-weight: bold;
+}
+
+.mensajes {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 10px;
+}
+.mensajes p {
+  margin-bottom: 5px;
+  color: black;
+  text-transform: none;
+}/*# sourceMappingURL=main.css.map */
