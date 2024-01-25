@@ -161,6 +161,8 @@ main {
   border-radius: 10px;
   border: 1px solid black;
   padding: 10px;
+  max-height: 550px;
+  overflow: auto;
 }
 .contenedorMensajes .title {
   font-weight: bold;
@@ -196,8 +198,18 @@ main {
   padding: 10px;
   border-radius: 10px;
 }
+.mensaje .mensajeCopiar {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
 
 .mensajeBorrar:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.mensajeCopiar:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -207,5 +219,28 @@ main {
 }
 
 .contenedorReglas {
-  background-color: red;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.contenedorReglas:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+
+.reglasTitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.reglasContenido p {
+  color: black;
+  margin: 5px;
 }/*# sourceMappingURL=main.css.map */
