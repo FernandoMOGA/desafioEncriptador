@@ -85,6 +85,28 @@ function borrarElemento(id) {
     }
 }
 
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('mensajeCopiar')) {
+        var contenedorMensaje = e.target.closest('.mensaje');
+        if (contenedorMensaje) {
+            var textoACopiar = contenedorMensaje.querySelector('p').textContent;
+
+            var textareaTemporal = document.createElement('textarea');
+            textareaTemporal.value = textoACopiar;
+            document.body.appendChild(textareaTemporal);
+
+            textareaTemporal.select();
+            try {
+                document.execCommand('copy');
+            } catch (err) {
+                console.error('No se pudo copiar al portapapeles:', err);
+            } finally {
+                document.body.removeChild(textareaTemporal);
+            }
+        }
+    }
+});
+
 var buttonReglas = document.querySelector('.reglasTitle');
 var reglasContenedor = document.querySelector('.reglasContenido');
 menu.addEventListener('click', buMenu);
@@ -125,3 +147,14 @@ function decodificarCadena(inputString) {
     nuevoString = nuevoString.replace(/ufat/g, 'u');
     return nuevoString;
 }
+
+
+
+
+
+
+
+
+
+
+
